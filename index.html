@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh Undangan Online</title>
+    <!-- using Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Script Countdown -->
+    <script src="./countdown/simplyCountdown.min.js"></script>
+    <link rel="stylesheet" href="./simplyCountdown.theme.default.css" />
+  </head>
+  <body>
+    <section
+      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+      id="hero"
+    >
+      <main>
+        <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h1>Me & You</h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="simply-countdown"></div>
+        <a href="https://jemi.so/undangan184" class="btn btn-lg mt-4"
+          >Lihat Undangan</a
+        >
+      </main>
+    </section>
+
+    <!-- Script bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2030, // required
+        month: 6, // required
+        day: 28, // required
+        hours: 0, // Default is 0 [0-23] integer
+        minutes: 0, // Default is 0 [0-59] integer
+        seconds: 0, // Default is 0 [0-59] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "Hari", plural: "Hari" },
+          hours: { singular: "Jam", plural: "Jam" },
+          minutes: { singular: "Menit", plural: "Menit" },
+          seconds: { singular: "Detik", plural: "Detik" },
+        },
+
+        onEnd: function () {
+          // your code
+          return;
+        },
+        refresh: 1000, //default refresh every 1s
+        sectionClass: "simply-section", //section css class
+        amountClass: "simply-amount", // amount css class
+        wordClass: "simply-word", // word css class
+        zeroPad: false,
+        countUp: false, // enable count up if set to true
+      });
+    </script>
+  </body>
+</html>

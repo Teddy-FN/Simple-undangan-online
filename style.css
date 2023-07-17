@@ -15,14 +15,47 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
+i {
+  color: #fff;
+  margin-right: 10px;
+}
+
 body,
 html {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
   min-height: 2000px;
+  position: relative;
 }
 
 /* Selector by class */
+header {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+  z-index: 2;
+}
+
+.container-page {
+  padding: 0 4rem;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-item a {
+  color: #fff;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
 
 .hero::before {
   content: "";
@@ -73,11 +106,106 @@ html {
   box-shadow: var(--shadow-preset);
 }
 
+/* Our Story */
+.ourstory {
+  padding: 10rem 0;
+  background-color: #f2e7e1;
+}
+
+/* Image Desc Married */
+.desc-married {
+  background-image: url("./img/hero.jpg");
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  filter: grayscale(100%);
+  padding: 10rem 0;
+}
+
+.text-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+}
+
+.text-desc h3 {
+  font-size: 6rem;
+  color: #000;
+  text-shadow: var(--shadow-preset);
+}
+
+/* Undangan */
+.undangan {
+  background-color: #f2e7e1;
+  /* background: url(../img/bg.png); */
+  /* font-family: "Roboto Condensed"; */
+  font-size: 1.2em;
+  line-height: 24px;
+  color: #000;
+  /*font-weight: 300;*/
+  text-align: center;
+  padding: 10rem 0;
+  position: relative;
+}
+
+.undangan:before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 26px;
+  background: url(../img/line.png);
+}
+
+.undangan:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  height: 26px;
+  background: url(../img/line.png);
+}
+
+.undangan div.container {
+  text-align: center;
+  padding: 0 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.undangan h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 2em;
+  color: white;
+  filter: dropshadow(color=rgba(255, 255, 255, 0.5), offx=1, offy=1);
+  text-align: center;
+  padding: 20px 0 0;
+  margin: 0;
+  text-shadow: var(--shadow-preset);
+}
+
+.btn-photo {
+  color: var(--pink);
+  background-color: #fff;
+}
+
+.btn-photo:hover {
+  color: #fff;
+  background-color: var(--pink);
+  box-shadow: var(--shadow-preset);
+}
+
 /* Media Query */
 /* Laptop */
 @media (max-width: 992px) {
   html {
     font-size: 75%;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    font-size: 1rem;
   }
 }
 
@@ -86,11 +214,21 @@ html {
   html {
     font-size: 62.5%;
   }
+
+  .navbar-brand,
+  .nav-link {
+    font-size: 0.75rem;
+  }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
   html {
     font-size: 60%;
+  }
+
+  .navbar-brand,
+  .nav-link {
+    font-size: 1rem;
   }
 }

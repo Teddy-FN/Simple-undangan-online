@@ -196,6 +196,22 @@ header {
   box-shadow: var(--shadow-preset);
 }
 
+/* video prewedding */
+.video {
+  filter: grayscale();
+  transition: 0.5s ease-in;
+}
+
+.video:hover {
+  filter: none;
+  transition: 0.5s ease-in;
+}
+
+/* Ceremony */
+.ceremony {
+  margin-top: -10px;
+}
+
 /* Media Query */
 /* Laptop */
 @media (max-width: 992px) {

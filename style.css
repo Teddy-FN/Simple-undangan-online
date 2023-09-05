@@ -114,7 +114,7 @@ header {
 
 /* Image Desc Married */
 .desc-married {
-  background-image: url("./img/hero.jpg");
+  /* background-image: url("./img/hero.jpg"); */
   background-position: center center;
   background-size: cover;
   min-height: 100vh;
@@ -155,7 +155,7 @@ header {
   position: absolute;
   top: 0px;
   height: 26px;
-  background: url(../img/line.png);
+  /* background: url(../img/line.png); */
 }
 
 .undangan:after {
@@ -164,7 +164,7 @@ header {
   position: absolute;
   bottom: 0px;
   height: 26px;
-  background: url(../img/line.png);
+  /* background: url(../img/line.png); */
 }
 
 .undangan div.container {

@@ -1,0 +1,20 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;200;300;400;600;700&display=swap");
+
+/* Root  */
+:root {
+  --bg-primary: #fff;
+  --pink: #f14e95;
+  --bg-color: #0a0a0a;
+  --shadow-preset: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--pink);
+}

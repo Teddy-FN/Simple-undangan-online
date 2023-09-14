@@ -3,8 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
 
-// Utils
-const dirName = require("./utils/index");
+const errorPage = require("./controller/error");
 
 // Import File
 const Home = require("./route/Home");
@@ -22,8 +21,6 @@ app.use("/", Home.home);
 app.use("/married", Reception.reception);
 
 // Error Page
-app.use((req, res, next) => {
-  res.status(404).sendFile(path.join(dirName, "views", "404.html"));
-});
+app.use(errorPage.getErrorPage);
 
 app.listen(4000);
